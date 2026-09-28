@@ -2,7 +2,7 @@
 
 [![build](https://github.com/mikidev06/filc-mod/actions/workflows/build.yml/badge.svg)](https://github.com/mikidev06/filc-mod/actions/workflows/build.yml)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-brightgreen)](https://fabricmc.net/)
-[![License](https://img.shields.io/badge/License-GPL--3.0-blue)](LICENSE.txt)
+[![License](https://img.shields.io/badge/License-GPL--3.0-blue)](LICENSE)
 
 A client-side Fabric mod that puts the [filc.petrik.hu](https://filc.petrik.hu) timetable
 board inside Minecraft. Type `/filc` and your week opens as a chest GUI — lessons as items,
@@ -166,4 +166,4 @@ null and nesting quirk in them came off the wire.
 Timetable data and API by the [Filc](https://github.com/filcdev/filc) project (AGPL-3.0).
 This mod is an independent client and is not affiliated with them or with Petrik Lajos.
 
-Licensed under GPL-3.0 — see `LICENSE.txt`.
+Licensed under GPL-3.0 — see `LICENSE`.
