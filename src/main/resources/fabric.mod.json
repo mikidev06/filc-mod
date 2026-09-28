@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "filc_mod",
+  "version": "${version}",
+  "name": "Filc Mod",
+  "description": "Fetch Petrik timetables and substitutions from filc.petrik.hu without leaving the game.",
+  "authors": [
+    "mikidev06"
+  ],
+  "contact": {
+    "sources": "https://github.com/mikidev06/filc-mod"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/filc_mod/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "me.mikidev06.filc_mod.client.Filc_modDataGenerator"
+    ],
+    "client": [
+      "me.mikidev06.filc_mod.client.Filc_modClient"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "filc_mod.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
