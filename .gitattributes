@@ -1,0 +1,20 @@
+# Normalise line endings so the repo is identical on every platform.
+* text=auto eol=lf
+
+# The Windows launcher must keep CRLF or cmd.exe will not run it.
+*.bat text eol=crlf
+
+# The POSIX launcher must keep LF even when checked out on Windows.
+gradlew text eol=lf
+
+# Never touch binaries.
+*.jar binary
+*.png binary
+*.ogg binary
+*.zip binary
+
+# Keep generated and vendored files out of diffs and language stats.
+gradlew         linguist-vendored
+gradlew.bat     linguist-vendored
+gradle/wrapper/** linguist-vendored
+src/test/resources/fixtures/** linguist-generated
