@@ -115,6 +115,23 @@ JDK cannot resolve the plugin at all — Gradle fails with a `no matching varian
 before the build starts. Loom also needs Gradle 9.7+, which the committed wrapper pins.
 The mod itself is compiled against Java 21, so it runs on any Minecraft 1.21.1 install.
 
+### Releasing
+
+Releases are cut by pushing a version tag, not by pushing to `main`:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+CI then builds with `-Pmod_version=1.0.0`, checks that the version baked into
+`fabric.mod.json` matches the tag, and publishes a GitHub Release with the mod jar and
+sources jar attached. `gradle.properties` keeps saying `1.0-SNAPSHOT` — the tag is the
+single source of truth for a release version.
+
+A tag with a hyphen (`v1.0.0-rc1`) is published as a pre-release and is not marked latest.
+You can also trigger a release by hand from the Actions tab.
+
 ## How it is put together
 
 The code splits along one line: **anything that imports `net.minecraft` lives in
